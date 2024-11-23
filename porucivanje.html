@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poručivanje</title>
+    <style>
+         nav {
+            background-color: darkred;
+            color: white;
+            padding: 10px;
+            position: relative;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 5px;
+            padding: 5px;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: solid;
+        }
+        body{
+            background-image: url("images/cover.webp");
+        }
+
+        p{
+            background-color: aliceblue;
+        }
+    </style>
+    <link rel="icon" href="images/gaming_land.jpg">
+</head>
+<body onload="prikaziVreme()">
+    <nav>
+    <h><span>GAMER </span>ZONE  <br><br></h>
+        <ul>
+            <li><a href="projekat.html">Početna</a></li>
+            <li><a href="igre.html">Igre</a></li>
+            <li><a href="porucivanje.html">Poručivanje</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+  <p>Trenutno je: <span id="time"></span></p><br><br>
+
+  <p>Poručite video igru: </p>
+
+  <form method="post" action="obrada_podataka.php">
+    <label for="ime">Ime</label><br>
+    <input type="text" name="ime" placeholder="Ime"><br><br>
+    <label for="prezime">Prezime</label><br>
+    <input type="text" name="prezime" placeholder="Prezime"><br><br>
+    <label for="email">E-mail</label><br>
+    <input type="email" name="mail" placeholder="E-mail"><br><br>
+    <label for="broj">Broj telefona</label><br>
+    <input type="tell" name="broj" placeholder="Broj telefona"><br><br>
+    <label for="grad">Izaberite grad</label><br>
+    <select name="grad" id="grad">
+    <option value="Novi Sad">Novi Sad</option>
+    <option value="Beograd">Beograd</option>
+    <option value="Kragujevac">Kragujevac</option>
+    <option value="Niš">Niš</option>
+    </select><br><br>
+    <label for="igra">Odaberite video igru</label><br>
+    <select name="igra" id="igra">
+    <option value="Assassins Creed II">Assassin's Creed II</option>
+    <option value="The Witcher III">The Witcher III</option>
+    <option value="Grand Theft Auto IV">Grand Theft Auto IV</option>
+    <option value="FIFA 22">FIFA22</option>
+    <option value="Tomb Raider: Angel of Darkness">Tomb Raider: Angel of Darkness</option>
+    <option value="Stronghold 2 Deluxe">Stronghold 2 Deluxe</option>
+    </select><br><br>
+    <input type="submit" value="Pošalji"><br><br><br>
+  </form>
+
+  <p>Pretraga porudžbine: </p><br>
+  <form method="post" action="pretraga.php">
+  <input type="text" name="search" placeholder="Pretražte porudžbinu po imenu ili prezimenu">
+    <button type="submit">Pretraži</button><br><br><br>
+  </form>
+
+  <script src="projekat.js"></script>  
+</body>
+</html>

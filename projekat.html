@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer Zone</title>
+    <style>
+        nav {
+            background-color: darkred;
+            color: white;
+            padding: 10px;
+            position: relative;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 5px;
+            padding: 5px;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: solid;
+        }
+        body{
+            background-image: url("images/cover.webp");
+        }
+        h1{
+            background-color: aliceblue;
+        }
+        #vreme{
+            background-color: aliceblue;
+        }
+        p{
+            background-color: aliceblue;
+            font-size: medium;
+        }
+        p1{
+            background-color: darkred;
+            color: white;
+            padding: 5px;
+        }
+        h2{
+            color: aliceblue;
+        }
+    </style>
+    <link rel="icon" href="images/gaming_land.jpg">
+</head>
+<body onload="prikaziVreme()">
+    <nav>
+    <h><span>GAMER </span>ZONE  <br><br></h>
+        <ul>
+            <li><a href="projekat.html">Početna</a></li>
+            <li><a href="igre.html">Igre</a></li>
+            <li><a href="porucivanje.html">Poručivanje</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+  <p>Trenutno je: <span id="time"></span></p>
+
+    <img src="images/game_zone.jpg" alt="Slika" width="150">
+
+    <p>Dobrodošli na sajt na kojem možete kupiti igre koje imamo u ponudi po povoljnim cenama, a možete i da poručite ukoliko nemamo na stanju željenu igru koju tražite!</p>
+
+    <?php
+
+echo "<p>NOVO! TRAILER GRAND THEFT AUTO VI: </p><br> ";
+$video_url = "https://www.youtube.com/embed/QdBZY2fkU-0";
+?>
+    <iframe width="560" height="315" src="<?php echo $video_url ?>" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <img src="images/gaming-ishotz.gif" alt="Animacija">
+
+    <?php
+
+$counter_file = "brojac.txt";
+$counter = file_get_contents($counter_file);
+$counter++;
+file_put_contents($counter_file, $counter);
+?>
+
+<p>Broj poseta: <?php echo $counter; ?></p>
+
+
+<br> <br> 
+<p>
+<?php   
+$url = 'https://wttr.in/NoviSad?format=%t';
+
+$html = file_get_contents($url);
+
+$temperature = trim($html);
+
+echo "Trenutna temperatura u Novom Sadu je: $temperature ";
+echo "<br> <br>";
+?></p>
+
+    <div class="faq">
+        <h2>Često postavljana pitanja</h2>
+        <p>Da li imate sve igre u ponudi?  - Nažalost nemamo, ali uvek možete poručiti kod nas, a mi ćemo se potruditi da u skorije vreme nabavimo željenu video igru</p>
+        <p>U kojim gradovima imate prodavnicu?  - Prodavnicu imamo u Novom Sadu, Beogradu, Kragujevcu i Nišu.</p>
+        <p>Gde mogu da naručim video igru?  - Video igru možete poručiti u odeljku za poručivanje i popunite tražene podatke.</p>
+    </div>
+    <script src="projekat.js"></script>
+
+    <p1>
+    <marquee behavior="scroll" direction="left">Hvala što posećujete naš sajt, preporučite nas!</marquee></p1>
+
+</body>
+</html>
