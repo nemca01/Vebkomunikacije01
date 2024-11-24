@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-sitemap: https://github.com/nemca01/Vebkomunikacijeprojekat01.git/sitemap.xml
+sitemap: https://nemca01.github.io/veb-komunikacije-projekat01/sitemap.xml
