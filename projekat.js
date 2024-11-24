@@ -33,9 +33,12 @@ document.getElementById("prikazi-proizvode").addEventListener("mouseover", funct
 function kupovina(){
     alert('Uspešno ste ubacili u korpu ovu igricu!');
 }
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B13KQL7RTB"></script>
-    window.dataLayer = window.dataLayer || [];
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-46P7H8GSD5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-B13KQL7RTB');
+  gtag('config', 'G-46P7H8GSD5');
+</script>
